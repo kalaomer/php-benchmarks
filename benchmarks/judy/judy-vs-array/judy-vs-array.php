@@ -1,10 +1,9 @@
 <?php
-  /**
-   * Object hashing tests.
-   */
+/*
+ * @author Ömer Kala <kalaomer@hotmail.com>
+ */
 
 ini_set('memory_limit','512M');
-//ini_set("judy.string.maxlength", "1280000");
 
 isset( $argv[1] ) ?
 	$iterations = $argv[1]
@@ -14,7 +13,7 @@ isset( $argv[1] ) ?
 isset( $argv[2] ) ?
 	$data = eval( "return " . $argv[2] . ";" )
 	:
-	$data = rand() * rand() * 4;
+	$data = rand() * rand();
 
 isset( $argv[3] ) ?
 	$judyType = $argv[3] //eval( "return JUDY::" . $argv[3] . ";" )
